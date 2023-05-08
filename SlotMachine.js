@@ -28,8 +28,7 @@ const depositMoney = () => {
     {const deposit = prompt("How much money would you like to deposit? ");
     const depositNum = parseFloat(deposit);
     if (isNaN(depositNum) || depositNum<=0) {
-        console.log("Invalid input. Please enter a number greater than 0.");   
-        //depositMoney();
+        console.log("Invalid input. Please enter a number greater than 0.");  
     }
     else {
         console.log(`You have deposited $${depositNum}.`);
@@ -65,7 +64,6 @@ const betAmount = (balance,linesNum) => {
     //the bet is distributed evenly among the number of lines
     if (isNaN(betNum) || betNum<=0 || betNum>(balance/linesNum)) {
         console.log("Invalid bet amount. Please try again!");   
-        //betAmount();
     }
     else {
         console.log(`You have bet $${betNum}.`);
@@ -115,7 +113,6 @@ const transpose = (grid) => {
     }
     return newGrid;
 };
-
 
 const printNewGrid = (newGrid) => {
     for (const row of newGrid) {
